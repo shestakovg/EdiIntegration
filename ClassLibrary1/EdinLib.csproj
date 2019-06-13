@@ -49,6 +49,10 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Edin.cs" />
+    <Compile Include="EdinFactory.cs" />
+    <Compile Include="Helpers\EdinHelper.cs" />
+    <Compile Include="Helpers\EdinHelperBase.cs" />
+    <Compile Include="Interfaces\IEdin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -114,6 +118,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

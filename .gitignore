@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/EdiIntegration/obj/ARM/Debug
+/EdiIntegration/obj/x86/Debug
+/ConsoleApp1/bin/Debug
+/ClassLibrary1/bin/Debug
+/ClassLibrary1/obj/Debug
+/.vs/EdiIntegration
