@@ -10,6 +10,6 @@ namespace EdinLib
 {
     public static class EdinFactory
     {
-        public static IEdin CreateEdin() => new EdinHelper();
+        public static IEdin CreateEdin() => new EdinHelper("uaunicom", "80d10ffd63edf7fd340f120e0fa480a0");
     }
 }

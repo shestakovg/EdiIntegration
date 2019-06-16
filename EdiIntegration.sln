@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.572
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{20EB8E6B-10FE-4ECD-90E0-41DF8CC86270}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdinLib", "ClassLibrary1\EdinLib.csproj", "{DE850A70-6AE3-4D09-A32F-07C1BF2A5559}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{9B11FE7B-307E-4334-8CFC-5ED1615DE140}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,26 @@ Global
 		{DE850A70-6AE3-4D09-A32F-07C1BF2A5559}.Release|x64.Build.0 = Release|Any CPU
 		{DE850A70-6AE3-4D09-A32F-07C1BF2A5559}.Release|x86.ActiveCfg = Release|Any CPU
 		{DE850A70-6AE3-4D09-A32F-07C1BF2A5559}.Release|x86.Build.0 = Release|Any CPU
+		{9B11FE7B-307E-4334-8CFC-5ED1615DE140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B11FE7B-307E-4334-8CFC-5ED1615DE140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B11FE7B-307E-4334-8CFC-5ED1615DE140}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{9B11FE7B-307E-4334-8CFC-5ED1615DE140}.Debug|ARM.Build.0 = Debug|Any CPU
+		{9B11FE7B-307E-4334-8CFC-5ED1615DE140}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{9B11FE7B-307E-4334-8CFC-5ED1615DE140}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{9B11FE7B-307E-4334-8CFC-5ED1615DE140}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9B11FE7B-307E-4334-8CFC-5ED1615DE140}.Debug|x64.Build.0 = Debug|Any CPU
+		{9B11FE7B-307E-4334-8CFC-5ED1615DE140}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9B11FE7B-307E-4334-8CFC-5ED1615DE140}.Debug|x86.Build.0 = Debug|Any CPU
+		{9B11FE7B-307E-4334-8CFC-5ED1615DE140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B11FE7B-307E-4334-8CFC-5ED1615DE140}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B11FE7B-307E-4334-8CFC-5ED1615DE140}.Release|ARM.ActiveCfg = Release|Any CPU
+		{9B11FE7B-307E-4334-8CFC-5ED1615DE140}.Release|ARM.Build.0 = Release|Any CPU
+		{9B11FE7B-307E-4334-8CFC-5ED1615DE140}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{9B11FE7B-307E-4334-8CFC-5ED1615DE140}.Release|ARM64.Build.0 = Release|Any CPU
+		{9B11FE7B-307E-4334-8CFC-5ED1615DE140}.Release|x64.ActiveCfg = Release|Any CPU
+		{9B11FE7B-307E-4334-8CFC-5ED1615DE140}.Release|x64.Build.0 = Release|Any CPU
+		{9B11FE7B-307E-4334-8CFC-5ED1615DE140}.Release|x86.ActiveCfg = Release|Any CPU
+		{9B11FE7B-307E-4334-8CFC-5ED1615DE140}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

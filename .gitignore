@@ -8,3 +8,6 @@
 /ClassLibrary1/bin/Debug
 /ClassLibrary1/obj/Debug
 /.vs/EdiIntegration
+/UnitTest/bin/Debug
+/UnitTest/obj/Debug
+/packages
