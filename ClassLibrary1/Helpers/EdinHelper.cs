@@ -24,18 +24,43 @@ namespace EdinLib.Helpers
 
         public IEnumerable<string> GetList()
         {
-            var serviceClient = getSeriveClient();
-            getListRequest request = new getListRequest();
-            request.user = new ediLogin() { login = this.Login, pass = this.Password};
-            var responce = serviceClient.getList(request);
-            if (responce.result.errorCode == 0)
+            using (var serviceClient = getSeriveClient())
             {
-                return responce.result.list;
-            }
-            else
-            {
-                throw new Exception($"Error: {responce.result.errorMessage} Error code: {responce.result.errorCode}");
+                getListRequest request = new getListRequest();
+                request.user = EdiLogin();
+                var responce = serviceClient.getList(request);
+                if (responce.result.errorCode == 0)
+                {
+                    return responce.result.list;
+                }
+                else
+                {
+                    throw new Exception($"Error: {responce.result.errorMessage} Error code: {responce.result.errorCode}");
+                }
             }
         }
+
+        public string GetDoc(string fileName)
+        {
+            using (var serviceClient = getSeriveClient())
+            {
+                getDocRequest docRequest = new getDocRequest();
+                docRequest.fileName = fileName;
+                docRequest.user = EdiLogin();
+                getDocResponse responce =  serviceClient.getDoc(docRequest);
+                if (responce.result.errorCode == 0)
+                {
+                    string xml = Encoding.UTF8.GetString(responce.result.content);
+                    //return xml.Replace("\\r", "").Replace("\\t", ""); 
+                    return xml;
+                }
+                else
+                {
+                    throw new Exception($"Error: {responce.result.errorMessage} Error code: {responce.result.errorCode}");
+                }
+            }
+        }
+
+        public ediLogin EdiLogin() => new ediLogin() { login = this.Login, pass = this.Password };
     }
 }

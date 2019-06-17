@@ -48,8 +48,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Dto\BaseModel.cs" />
+    <Compile Include="Dto\EdinDocBase.cs" />
+    <Compile Include="Dto\EdinOrder.cs" />
+    <Compile Include="Dto\OrderModel.cs" />
     <Compile Include="Edin.cs" />
     <Compile Include="EdinFactory.cs" />
+    <Compile Include="Enum\EdinDocTypes.cs" />
     <Compile Include="Helpers\EdinHelper.cs" />
     <Compile Include="Helpers\EdinHelperBase.cs" />
     <Compile Include="Interfaces\IEdin.cs" />

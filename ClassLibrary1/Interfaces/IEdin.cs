@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EdinLib.EdinServiceReference;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,8 @@ namespace EdinLib.Interfaces
 {
     public interface IEdin
     {
+        ediLogin EdiLogin();
         IEnumerable<string> GetList();
+        string GetDoc(string fileName);
     }
 }
