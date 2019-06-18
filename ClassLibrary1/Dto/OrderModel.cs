@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Xml;
@@ -58,6 +59,39 @@ namespace EdinLib.Dto
             public string Recipient { get; set; }
             [XmlElement(ElementName = "EDIINTERCHANGEID")]
             public string EdiInterChangeId { get; set; }
+            [XmlElement(ElementName = "POSITION")]
+            public List<OrderPosition> Positions { get; set; }
+
+        }
+
+        [Serializable()]
+        public class OrderPosition
+        {
+            [XmlElement(ElementName = "POSITIONNUMBER")]
+            public string PositionNumber { get; set; }
+            [XmlElement(ElementName = "PRODUCT")]
+            public string Product { get; set; }
+            [XmlElement(ElementName = "PRODUCTIDBUYER")]
+            public string ProductIdBuyer { get; set; }
+            [XmlElement(ElementName = "ORDEREDQUANTITY")]
+            public double OrderQuantity { get; set; }
+            [XmlElement(ElementName = "ORDERUNIT")]
+            public string OrderUnit { get; set; }
+            [XmlElement(ElementName = "ORDERPRICE")]
+            public double OrderPrice { get; set; }
+            [XmlElement(ElementName = "PRICEWITHVAT")]
+            public double PriceWithVAT { get; set; }
+            [XmlElement(ElementName = "ORDERPRICEUNIT")]
+            public string OrderPriceUnit { get; set; }
+            [XmlElement(ElementName = "CHARACTERISTIC")]
+            public Characteristic Characteristic;
+        }
+
+        [Serializable()]
+        public class Characteristic
+        {
+            [XmlElement(ElementName = "DESCRIPTION")]
+            public string Description { get; set; }
         }
 
         private EdinOrder Deserialize(string serializedObj)
