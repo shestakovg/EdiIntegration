@@ -3,6 +3,7 @@
 ################################################################################
 *.exe
 *.pdb
+*.cahce
 /EdiIntegration/obj/ARM/Debug
 /EdiIntegration/obj/x86/Debug
 /ConsoleApp1/bin/Debug
