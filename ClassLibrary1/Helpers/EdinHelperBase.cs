@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EdinLib.Helpers
 {
-    internal abstract class EdinHelperBase
+    public abstract class EdinHelperBase
     {
         protected string Login { get; private set; }
         protected string Password { get; private set; }

@@ -1,0 +1,7 @@
+C:\Users\shest\Source\Repos\EdiIntegration\ClassLibrary1\bin\Release\EdinLib.dll.config
+C:\Users\shest\Source\Repos\EdiIntegration\ClassLibrary1\bin\Release\EdinLib.dll
+C:\Users\shest\Source\Repos\EdiIntegration\ClassLibrary1\bin\Release\EdinLib.pdb
+C:\Users\shest\Source\Repos\EdiIntegration\ClassLibrary1\obj\Release\EdinLib.csprojAssemblyReference.cache
+C:\Users\shest\Source\Repos\EdiIntegration\ClassLibrary1\obj\Release\EdinLib.csproj.CoreCompileInputs.cache
+C:\Users\shest\Source\Repos\EdiIntegration\ClassLibrary1\obj\Release\EdinLib.dll
+C:\Users\shest\Source\Repos\EdiIntegration\ClassLibrary1\obj\Release\EdinLib.pdb

@@ -10,7 +10,7 @@ using EdinLib.Enum;
 
 namespace EdinLib.Helpers
 {
-    internal class EdinHelper : EdinHelperBase, IEdin
+    public class EdinHelper : EdinHelperBase, IEdin
     {
         public EdinHelper(string login, string password) : base(login, password)
         {
