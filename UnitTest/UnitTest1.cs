@@ -51,12 +51,19 @@ namespace UnitTest
         {
             var edin = EdinFactory.CreateEdin();
             var list = edin.GetList();
-            Assert.AreEqual(list.GetEnumerator().MoveNext(), true);
+            //Assert.AreEqual(list.GetEnumerator().MoveNext(), true);
             foreach (string file in list)
             {
                 var doc = edin.GetDoc(file);
-                File.WriteAllText(Path.Combine(@"c:\Users\shest\source\repos\EdiIntegration\UnitTest\Examples\", file), doc);
+                File.WriteAllText(Path.Combine(@"d:\temp\EdiExamples\", file), doc);
             }
+        }
+
+        [TestMethod]
+        public void TestGetOrderList()
+        {
+            var emptyVal = EdinFactory.CreateEdin().GetOrderList().GetEnumerator().MoveNext();
+            Assert.AreEqual(emptyVal, true);
         }
     }
 }

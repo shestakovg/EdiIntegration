@@ -17,11 +17,7 @@ namespace EdinLib.Dto
 
         protected override void IdentifyDocType()
         {
-            DescriptionAttribute[] attributes = (DescriptionAttribute[])EdinDocTypes.Order
-            .GetType()
-            .GetField(EdinDocTypes.Order.ToString())
-            .GetCustomAttributes(typeof(DescriptionAttribute), false);
-            string orderFileName = attributes.Length > 0 ? attributes[0].Description : string.Empty;
+            string orderFileName = EdinDocBase.GetDocTypeDescription(EdinDocTypes.Order);
             if (this.DocName.ToLower().Contains(orderFileName))
             {
                 this.DocIdentified = true;

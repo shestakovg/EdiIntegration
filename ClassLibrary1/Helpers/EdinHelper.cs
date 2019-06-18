@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EdinLib.Dto;
+using EdinLib.Enum;
 
 namespace EdinLib.Helpers
 {
@@ -61,6 +63,10 @@ namespace EdinLib.Helpers
             }
         }
 
+        public IEnumerable<string> GetOrderList()
+        {
+            return this.GetList().Where( x => x.ToLower().Contains(EdinDocBase.GetDocTypeDescription(EdinDocTypes.Order))).ToList();
+        }
         public ediLogin EdiLogin() => new ediLogin() { login = this.Login, pass = this.Password };
     }
 }

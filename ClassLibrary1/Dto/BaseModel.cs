@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace EdinLib.Dto
 {
@@ -23,7 +21,5 @@ namespace EdinLib.Dto
         }
 
         public string Xml { get; protected set; }
-
-
     }
 }

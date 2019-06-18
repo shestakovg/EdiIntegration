@@ -1,6 +1,7 @@
 ﻿using EdinLib.Enum;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,5 +28,14 @@ namespace EdinLib.Dto
 
         protected abstract void IdentifyDocType();
         protected abstract void ParseDoc();
+
+        public static string GetDocTypeDescription(EdinDocTypes docType)
+        {
+            DescriptionAttribute[] attributes = (DescriptionAttribute[])docType
+                .GetType()
+                .GetField(EdinDocTypes.Order.ToString())
+                .GetCustomAttributes(typeof(DescriptionAttribute), false);
+            return attributes.Length > 0 ? attributes[0].Description : string.Empty;
+        }
     }
 }

@@ -11,6 +11,8 @@ namespace EdinLib.Interfaces
     {
         ediLogin EdiLogin();
         IEnumerable<string> GetList();
+        IEnumerable<string> GetOrderList();
         string GetDoc(string fileName);
+
     }
 }
