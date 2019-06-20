@@ -37,6 +37,19 @@ namespace EdinLib.Dto
             public double Vat { get; set; }
             [XmlElement(ElementName = "HEAD")]
             public EdinOrderHead Head { get; set; }
+            public override string ToString()
+            {
+                return $@"DocumentName:{DocumentName}{Environment.NewLine}
+                          Number:{Number}{Environment.NewLine}
+                          Date:{Date}{Environment.NewLine}
+                          DeliveryDate:{DeliveryDate}{Environment.NewLine}
+                          DeliveryTime:{DeliveryTime}{Environment.NewLine}
+                          Currency:{Currency}{Environment.NewLine}
+                          Vat:{Vat}{Environment.NewLine}
+                          -----------------HEAD-------------------{Environment.NewLine}
+                          {Head}
+                ";
+            }
         }
 
         [Serializable()]
@@ -61,6 +74,23 @@ namespace EdinLib.Dto
             public string EdiInterChangeId { get; set; }
             [XmlElement(ElementName = "POSITION")]
             public List<OrderPosition> Positions { get; set; }
+            public override string ToString()
+            {
+                string stringValue =$@"Supplier:{Supplier}{Environment.NewLine}
+                                       Buyer:{Buyer}{Environment.NewLine}
+                                       DeliveryPlace:{DeliveryPlace}{Environment.NewLine}
+                                       InvoicePartner:{InvoicePartner}{Environment.NewLine}
+                                       Sender:{Sender}{Environment.NewLine}
+                                       FinalRecipient:{FinalRecipient}{Environment.NewLine}
+                                       Recipient:{Recipient}{Environment.NewLine}
+                                       EdiInterChangeId:{EdiInterChangeId}{Environment.NewLine}";
+                stringValue += $"=============Positions========================={Environment.NewLine}";
+                foreach (var pos in Positions)
+                {
+                    stringValue += pos.ToString()+ Environment.NewLine+ Environment.NewLine;
+                }
+                return stringValue;
+            }
 
         }
 
@@ -85,6 +115,19 @@ namespace EdinLib.Dto
             public string OrderPriceUnit { get; set; }
             [XmlElement(ElementName = "CHARACTERISTIC")]
             public Characteristic Characteristic;
+
+            public override string ToString()
+            {
+                return $@"PositionNumber:{PositionNumber}{Environment.NewLine}
+                          Product:{Product}{Environment.NewLine}
+                          ProductIdBuyer:{ProductIdBuyer}{Environment.NewLine}
+                          OrderQuantity:{OrderQuantity}{Environment.NewLine}
+                          OrderUnit:{OrderUnit}{Environment.NewLine}
+                          OrderPrice:{OrderPrice}{Environment.NewLine}
+                          PriceWithVAT:{PriceWithVAT}{Environment.NewLine}
+                          OrderPriceUnit:{OrderPriceUnit}{Environment.NewLine}
+                          Characteristic:{Characteristic}{Environment.NewLine}";
+            }
         }
 
         [Serializable()]
@@ -92,6 +135,10 @@ namespace EdinLib.Dto
         {
             [XmlElement(ElementName = "DESCRIPTION")]
             public string Description { get; set; }
+            public override string ToString()
+            {
+                return Description;
+            }
         }
 
         private EdinOrder Deserialize(string serializedObj)
