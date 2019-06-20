@@ -10,6 +10,7 @@ namespace EdinLib.Dto
         protected BaseModel(string xml)
         {
             Xml = xml;
+            
             MemoryStream MemStream = new MemoryStream();
             byte[] b = Encoding.UTF8.GetBytes(Xml);
 
@@ -17,6 +18,10 @@ namespace EdinLib.Dto
             if (Xml.StartsWith(_byteOrderMarkUtf8))
             {
                 Xml = Xml.Remove(0, _byteOrderMarkUtf8.Length);
+            }
+            if (Xml.IndexOf("?xml version=\"1.0\" encoding=\"UTF-8\"?>") >= 0)
+            {
+                Xml = Xml.Replace("?xml version=\"1.0\" encoding=\"UTF-8\"?>", "");
             }
         }
 

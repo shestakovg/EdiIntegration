@@ -47,6 +47,19 @@ namespace UnitTest
         }
 
         [TestMethod]
+        public void TestParseAllOrders()
+        {
+            var edin = EdinFactory.CreateEdin();
+            var list = edin.GetOrderList();
+            //Assert.AreEqual(list.GetEnumerator().MoveNext(), true);
+            foreach (string file in list)
+            {
+                var doc = edin.GetDoc(file);
+                Assert.IsNotNull(EdinFactory.GetEdinDoc(file, doc));
+            }
+        }
+
+        [TestMethod]
         public void TestSaveAllDocs()
         {
             var edin = EdinFactory.CreateEdin();
