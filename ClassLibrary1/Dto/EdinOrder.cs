@@ -10,7 +10,7 @@ namespace EdinLib.Dto
 {
     public class EdinOrder : EdinDocBase
     {
-        public OrderModel Order { get; private set;}
+        public OrderModel OrderModel { get; private set;}
         public EdinOrder(string name, string body) : base(name, body)
         {
         }
@@ -28,7 +28,7 @@ namespace EdinLib.Dto
 
         protected override void ParseDoc()
         {
-            Order = new OrderModel(this.DocBody);
+            OrderModel = new OrderModel(this.DocBody);
         }
     }
 }

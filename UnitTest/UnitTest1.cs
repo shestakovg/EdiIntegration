@@ -3,6 +3,7 @@ using System.Linq;
 using System.IO;
 using EdinLib;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using EdinLib.Dto;
 
 namespace UnitTest
 {
@@ -55,7 +56,10 @@ namespace UnitTest
             foreach (string file in list)
             {
                 var doc = edin.GetDoc(file);
-                Assert.IsNotNull(EdinFactory.GetEdinDoc(file, doc));
+                File.WriteAllText(Path.Combine(@"c:\temp\EdiExamples\", file), doc);
+                var parsedDoc = EdinFactory.GetEdinDoc(file, doc) as EdinOrder;
+                Assert.IsNotNull(parsedDoc);
+                File.WriteAllText(Path.Combine(@"c:\temp\EdiExamples\", file+"Parsed"), parsedDoc.OrderModel.Order.ToString());
             }
         }
 
