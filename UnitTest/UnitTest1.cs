@@ -47,21 +47,21 @@ namespace UnitTest
             Assert.IsNotNull(EdinFactory.GetEdinDoc(docName, doc));
         }
 
-        [TestMethod]
-        public void TestParseAllOrders()
-        {
-            var edin = EdinFactory.CreateEdin();
-            var list = edin.GetOrderList();
-            //Assert.AreEqual(list.GetEnumerator().MoveNext(), true);
-            foreach (string file in list)
-            {
-                var doc = edin.GetDoc(file);
-                File.WriteAllText(Path.Combine(@"c:\temp\EdiExamples\", file), doc);
-                var parsedDoc = EdinFactory.GetEdinDoc(file, doc) as EdinOrder;
-                Assert.IsNotNull(parsedDoc);
-                File.WriteAllText(Path.Combine(@"c:\temp\EdiExamples\", file+"Parsed"), parsedDoc.OrderModel.Order.ToString());
-            }
-        }
+        //[TestMethod]
+        //public void TestParseAllOrders()
+        //{
+        //    var edin = EdinFactory.CreateEdin();
+        //    var list = edin.GetOrderList();
+        //    //Assert.AreEqual(list.GetEnumerator().MoveNext(), true);
+        //    foreach (string file in list)
+        //    {
+        //        var doc = edin.GetDoc(file);
+        //        File.WriteAllText(Path.Combine(@"c:\temp\EdiExamples\", file), doc);
+        //        var parsedDoc = EdinFactory.GetEdinDoc(file, doc) as EdinOrder;
+        //        Assert.IsNotNull(parsedDoc);
+        //        File.WriteAllText(Path.Combine(@"c:\temp\EdiExamples\", file+"Parsed"), parsedDoc.OrderModel.Order.ToString());
+        //    }
+        //}
 
         [TestMethod]
         public void TestSaveAllDocs()

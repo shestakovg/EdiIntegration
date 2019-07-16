@@ -16,7 +16,7 @@ namespace EdinLib
 
         public static EdinDocBase GetEdinDoc(string name, string body)
         {
-            EdinOrder order = new EdinOrder(name, body);
+            EdinDocOrder order = new EdinDocOrder(name, body);
             if (order.DocIdentified)
             {
                 return order;

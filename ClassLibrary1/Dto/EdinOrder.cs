@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace EdinLib.Dto
 {
-    public class EdinOrder : EdinDocBase
+    public class EdinDocOrder : EdinDocBase
     {
         public OrderModel OrderModel { get; private set;}
-        public EdinOrder(string name, string body) : base(name, body)
+        public EdinDocOrder(string name, string body) : base(name, body)
         {
         }
 
