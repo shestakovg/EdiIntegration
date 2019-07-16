@@ -31,7 +31,7 @@ namespace UnitTest
             Assert.AreEqual(list.GetEnumerator().MoveNext(), true);
             var enumerator = list.GetEnumerator();
             enumerator.MoveNext();
-            var doc = edin.GetDoc(enumerator.Current);
+            var doc = edin.GetDoc("order_20190710094107_502060002.xml");
             Assert.AreNotSame(doc, string.Empty);
         }
 
@@ -42,8 +42,10 @@ namespace UnitTest
             var list = edin.GetList();
             Assert.AreEqual(list.GetEnumerator().MoveNext(), true);
             var docName = list.FirstOrDefault(x => x.Contains("order"));
+            docName = "order_20190710094107_502060002.xml";
             var doc = edin.GetDoc(docName);
             Assert.AreNotSame(doc, string.Empty);
+            var edinDoc = EdinFactory.GetEdinDoc(docName, doc);
             Assert.IsNotNull(EdinFactory.GetEdinDoc(docName, doc));
         }
 
